@@ -1,0 +1,79 @@
+body#about img{ width: 250px;}
+
+
+
+body{
+    font-size: 18px;
+    line-height: 1.5;
+    display: grid;
+    
+    grid-template-columns: 1fr 6fr 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:   
+    "hd hd nav "
+    "main par par "
+    "ft ft ft ";
+}
+
+
+body > header{
+ grid-area: hd;
+ grid-template-rows: 0px;
+ background-color: maroon;
+}
+body > *{
+    padding-left: 3rem;
+}
+body > nav{
+    justify-content: right;
+    grid-area: nav;
+    background-color: maroon;
+}
+body > nav ul{
+    list-style-type: none;
+    padding-top:2rem;
+}
+body > nav ul a{
+    display:inline
+}
+
+body > main{
+    grid-area: main;
+}
+
+body > p{
+    grid-area: par;
+}
+
+body> footer{
+    grid-area: ft;    
+}
+h1,h2,h3{
+line-height:1.2;
+}
+p{
+    max-width: 60em;
+    padding-top: 7.3rem;
+    text-indent: 3rem;
+}
+header, footer{
+    padding-top:  1.33rem;
+    padding-bottom: 1.33rem;
+}
+nav{
+    text-align: right;
+    padding-top: .7rem;
+    padding-left: 0;
+    padding-right: 2rem;
+}
+header h1, footer h1{
+    
+    margin-left: 0;
+}
+
+#nameText{
+    color: azure;
+}
+.btn-primary.active.custom-file-control:before, .btn-primary.custom-file-control:active:before, .btn-primary.custom-file-control:focus:before, .btn-primary.custom-file-control:hover:before, .btn-primary.focus.custom-file-control:before, .btn.btn-primary.active, .btn.btn-primary.focus, .btn.btn-primary:active, .btn.btn-primary:focus, .btn.btn-primary:hover, .open>.btn-primary.dropdown-toggle.custom-file-control:before, .open>.btn.btn-primary.dropdown-toggle{
+    color: #FFFFFF
+}
