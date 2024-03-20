@@ -1,61 +1,228 @@
-body#about img{ width: 250px;}
+root{
+
+
+}
+
+
+body1#about img{ width: 250px;}
+body2#portfolio img{ width: 250px;}
+body3#resume img{ width: 250px;}
 
 
 
-body{
+body1{
     font-size: 18px;
     line-height: 1.5;
     display: grid;
-    
-    grid-template-columns: 1fr 6fr 1fr;
+    grid-template-columns: 1fr 4fr 2fr;
     grid-template-rows: auto 1fr auto;
     grid-template-areas:   
     "hd hd nav "
     "main par par "
     "ft ft ft ";
+    
 }
 
-
-body > header{
+body1> header{
  grid-area: hd;
  grid-template-rows: 0px;
  background-color: maroon;
 }
-body > *{
+body1 > *{
     padding-left: 3rem;
 }
-body > nav{
+body1> nav{
     justify-content: right;
     grid-area: nav;
     background-color: maroon;
 }
-body > nav ul{
+body1> nav ul{
     list-style-type: none;
     padding-top:2rem;
 }
-body > nav ul a{
+body1> nav ul a{
     display:inline
 }
 
-body > main{
+body1 > main{
     grid-area: main;
 }
 
-body > p{
+body1> p{
     grid-area: par;
 }
 
-body> footer{
+body1> footer{
     grid-area: ft;    
 }
-h1,h2,h3{
-line-height:1.2;
-}
-p{
+body1 > p{
     max-width: 60em;
     padding-top: 7.3rem;
     text-indent: 3rem;
 }
+body2{
+    font-size: 18px;
+    line-height: 1.5;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:   
+    "hd nav "
+    "main main"
+    "ft ft ";
+    
+}
+
+
+body2> header{
+ grid-area: hd;
+ grid-template-rows: 0px;
+ background-color: maroon;
+}
+body2 > *{
+    padding-left: 3rem;
+}
+body2> nav{
+    justify-content: right;
+    grid-area: nav;
+    background-color: maroon;
+}
+body2> nav ul{
+    list-style-type: none;
+    padding-top:2rem;
+}
+body2> nav ul a{
+    display:inline
+}
+
+body2 > main{
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: auto 3fr auto;
+    grid-template-areas:  
+    "head0 par0" 
+    "head1 par1 "
+    "head2 par2 "
+}
+body2> main> head0{
+    grid-area:head0;
+}
+body2> main>head1{
+    grid-area:head1;
+}
+body2> main>par1{
+    grid-area:par1;
+}
+body2> main>head2{
+    grid-area:head2;
+}
+body2> main>par2{
+    grid-area:par2;
+}
+body2>h1{
+    grid-area: hder;
+}
+
+body2> p{
+    grid-area: main;
+}
+
+body2> footer{
+    grid-area: ft;    
+}
+body3{
+    font-size: 18px;
+    line-height: 1.5;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto 3fr auto;
+    grid-template-areas:   
+    "hd nav "
+    "main main"
+    "ft ft ";
+    
+}
+
+body3> header{
+ grid-area: hd;
+ grid-template-rows: 0px;
+ background-color: maroon;
+}
+body3 > *{
+    padding-left: 3rem;
+}
+body3> nav{
+    justify-content: right;
+    grid-area: nav;
+    background-color: maroon;
+}
+body3> nav ul{
+    list-style-type: none;
+    padding-top:2rem;
+}
+body3> nav ul a{
+    display:inline
+}
+
+body3 >list{
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    grid-template-rows: auto 3fr auto;
+    grid-template-areas:   
+    "head1 par1 "
+    "head2 par2 "
+    "head3 par3 "
+    "head4 par4 "
+    "head5 par5 "
+    "head6 par6 "
+    "ft ft ";
+}
+body3> list>hd1{
+    grid-area:head1;
+}
+body3> list>par1{
+    grid-area:par1;
+}
+body3> list>hd2{
+    grid-area:head2;
+}
+body3> list>par2{
+    grid-area:par2;
+}
+body3> list>hd3{
+    grid-area:head3;
+}
+body3> list>par3{
+    grid-area:par3;
+}
+body3> list>hd4{
+    grid-area:head4;
+}
+body3> list>par4{
+    grid-area:par4;
+}
+body3> list>hd5{
+    grid-area:head5;
+}
+body3> list>par5{
+    grid-area:par5;
+}
+body3 h4{
+    margin-top:.5rem;
+}
+
+
+body3> footer{
+    grid-area: ft;    
+    grid-template-rows: 0px;
+    background-color: maroon;
+}
+h1,h2,h3, h4{
+line-height:1.2;
+}
+
 header, footer{
     padding-top:  1.33rem;
     padding-bottom: 1.33rem;
@@ -65,15 +232,35 @@ nav{
     padding-top: .7rem;
     padding-left: 0;
     padding-right: 2rem;
+    font-size: 12px;
+    ;
 }
 header h1, footer h1{
     
     margin-left: 0;
 }
-
+footer{
+   
+   color: azure;
+   
+   bottom: 0;
+}
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+p{
+    max-width: 60em;
+    padding-top: 0 rem;
+    text-indent: 3rem;
+}
+#schoolName{
+    text-indent: 2rem;
+font-size:22px;
+}
 #nameText{
     color: azure;
 }
 .btn-primary.active.custom-file-control:before, .btn-primary.custom-file-control:active:before, .btn-primary.custom-file-control:focus:before, .btn-primary.custom-file-control:hover:before, .btn-primary.focus.custom-file-control:before, .btn.btn-primary.active, .btn.btn-primary.focus, .btn.btn-primary:active, .btn.btn-primary:focus, .btn.btn-primary:hover, .open>.btn-primary.dropdown-toggle.custom-file-control:before, .open>.btn.btn-primary.dropdown-toggle{
     color: #FFFFFF
+    
 }
